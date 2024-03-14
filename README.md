@@ -11,25 +11,44 @@ Google Drive Link: https://drive.google.com/drive/folders/1Wkxq-lsB6J8iteFSvlgeb
 Module 2 Challenge: VBA
 
 'Instructions
+
 'Create a script that loops through all the stocks for one year and outputs the following information:
+
 'The ticker symbol
+
 'Yearly change from the opening price at the beginning of a given year to the closing price at the end of that year.
+
 'The percentage change from the opening price at the beginning of a given year to the closing price at the end of that year.
+
 'The total stock volume of the stock.
+
 'Add functionality to your script to return the stock with the "Greatest % increase", "Greatest % decrease", and "Greatest total volume".
+
 'Make the appropriate adjustments to your VBA script to enable it to run on every worksheet (that is, every year) at once.
+
 'Use conditional formatting that will highlight positive change in green and negative change in red.
 
+
 'Column Creation:
+
 'On the same worksheet as the raw data, all columns created for:
+
 'Ticker Symbol
+
 'Total Stock Volume
+
 'Yearly Change
+
 'Percent Change
+
 'Open Price (Additional column to calculate Yearly Change and Percent Change)
+
 'Close Price(Additional column to calculate Yearly Change and Percent Change)
+
 'Greatest % Increase
+
 'Greatest % Decrease
+
 'Greatest Total Volume
 
 Sub ColumnCreation()
@@ -63,10 +82,15 @@ Sub ColumnCreation()
 End Sub
 
 'Retrieval of Data:
+
 'The script loops through one year of stock data and reads/ stores all the following values from each row:
+
 'Ticker Symbol
+
 'Volume of Stock
+
 'Open Price (opening price at the beginning of a given year. First occurrence in <open>)
+
 'Close Price (closing price at the end of that year. Last occurrence in <close>)
 
 Sub RetrieveData()
@@ -118,7 +142,9 @@ Sub RetrieveData()
 End Sub
 
 'Calculate Yearly Change:
+
 'Yearly change from the opening price at the beginning of a given year to the closing price at the end of that year.
+
 'Yearly Change = Closing Price - Opening Price (J =T-S)
 
 Sub CalculateYearlyChange()
@@ -146,7 +172,9 @@ Sub CalculateYearlyChange()
 End Sub
 
 'Calculate Percent Change:
+
 'The percentage change from the opening price at the beginning of a given year to the closing price at the end of that year.
+
 'Percent Change = ((Yearly change)/Opening Price)(K = J/S)
 
 Sub CalculatePercentChange()
@@ -178,6 +206,7 @@ Sub CalculatePercentChange()
 End Sub
 
 'Apply Conditional Formatting For the Yearly Change:
+
 'Conditional formatting that will highlight positive change in green and negative change in red
 
 Sub ApplyConditionalFormatting()
